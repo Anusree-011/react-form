@@ -15,6 +15,14 @@ function App() {
     setPlace(placeInput);
     setAge(ageInput)
   }
+  function resetData(){
+    setName("");
+    setAge();
+    setPlace("");
+    setNameInput("");
+    setPlaceInput("");
+    setAgeInput("");
+  }
 
   return (
     <div>
@@ -25,6 +33,7 @@ function App() {
       age:
       <input type="text"value={ageInput} onChange={(e)=> setAgeInput(e.target.value)}></input><br/>
       <button onClick={saveData}>Save</button>
+      <button onClick={resetData}>RESET</button>
       <p>My name is {name}</p>
       <p>I am coming from {place}</p>
       <p>i am {age} old</p>
